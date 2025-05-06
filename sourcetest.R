@@ -1,4 +1,3 @@
-### SOURCE MEMORY TEST
 testsourcememory <- function(memorytraces, testsource, c, gsys, n, bestmatch) {
   
   sourcealllikes=matrix(NA, n, ncol=1)
