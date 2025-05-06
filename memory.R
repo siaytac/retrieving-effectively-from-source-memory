@@ -220,12 +220,13 @@ memory = function(Nf, g, gsys, u, usource, c, criterion, condition, nsubj, Ntarg
         
         testsource <- matrix((sourcetestreordered[,trial]), ncol=1)
         testsource <- matrix(testsource[(Nf+1):(Nf*2)], ncol=1)
+        
         n <- length(memorytraces[,bestmatch][(!is.na(memorytraces[,bestmatch]))])
         n <- n/Nf-1
         
         sourcealllikes <- testsourcememory(memorytraces, testsource, c, gsys, n, bestmatch)
         
-        sourcealllikes <- mean(sourcealllikes[(!is.na(sourcealllikes))]) # take mean of all likelihood ratios
+        sourcealllikes <- mean(sourcealllikes[(!is.na(sourcealllikes))]) # take the mean of all likelihood ratios
         
         answerSource <- 0  # no for source
         if (sourcealllikes >= criterion) { # yes for source
