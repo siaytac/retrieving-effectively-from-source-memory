@@ -1,4 +1,4 @@
-makevectors <- function(Nf, g, Nitemstomake, gsys, u, c, prototype) {
+makevectors <- function(Nf, g, Nitemstomake, u, c, prototype) {
   
   #make items 
   studyList=matrix(prototype,Nf, Nitemstomake) # makes Nitemstomake copies of the item vector called prototype, each with Nf features
