@@ -3,7 +3,7 @@ This repository implements the Retrieving Effectively from Source Memory model d
 
 ## File Descriptions
 - `makevectors.R`: Creates memory vectors.
-- `updatevectors.R`: Update memory vectors after learning.
+- `updatevectors.R`: Updates memory vectors after learning.
 - `itemtest.R`: Computes the similarity between the probe and each memory trace.
 - `sourcetest.R`: Computes the similarity between the source probe and the sources of the best-matching item trace.
 - `memory.R`: Runs the memory tasks, including item and source recognition.
