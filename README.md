@@ -4,5 +4,5 @@ Aytaç, S., Kılıç, A., Criss, A. H., & Kellen, D. (2024). Retrieving effectiv
 
 ## Citation
 If you use or refer to this code, please cite:
-See [`CITATION.bib`](./CITATITON.bib) for the full reference.
+- See [`CITATION.bib`](./CITATITON.bib) for the full reference.
 
