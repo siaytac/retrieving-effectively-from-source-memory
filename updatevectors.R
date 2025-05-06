@@ -6,7 +6,7 @@ updatevectors <- function(Nf, gsys, studylistreordered, memorytraces, u, c, best
   trace <- array(memorytraces[(1+20*(bestmatch.source-1)):(20*bestmatch.source), bestmatch]) 
   randStore <- array(runif(Nf), length(trace))
   randCorr <- array(runif(Nf), length(trace))
-  storeWhich <- (randStore<=u & trace==0) #only if the feature equals to zero
+  storeWhich <- (randStore<=u & trace==0) # only if the feature equals to zero
   corrWhich <- (randStore<=u & randCorr<c & trace==0)
   
   trace[storeWhich] <- randFeatures[storeWhich]
