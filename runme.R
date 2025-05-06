@@ -4,6 +4,8 @@ graphics.off()
 {set.seed(15)} # just allows you to 'step in the same river twice' for debugging
 
 # set the working directory
+my.dir <- ""
+setwd(my.dir)
 
 # load the functions you will need to run this simulation
 source("makevectors.R") # create vectors
