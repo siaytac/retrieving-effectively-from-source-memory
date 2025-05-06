@@ -7,11 +7,11 @@ memory = function(Nf, g, gsys, u, usource, c, criterion, condition, nsubj, Ntarg
     
     # create items
     prototype <- matrix((rgeom(1*Nf, g)+1),ncol=1) 
-    targets <- makevectors(Nf, g, Ntargets, g, 1, 0, prototype) # note values of u is 1 and c is 0 because we want every ...
-    foils <- makevectors(Nf, g, Nfoils, g, 1, 0, prototype)     # feature to be stored and stored correctly for items
+    targets <- makevectors(Nf, g, Ntargets, gsys, 1, 0, prototype) # note values of u is 1 and c is 0 because we want every ...
+    foils <- makevectors(Nf, g, Nfoils, gsys, 1, 0, prototype)     # feature to be stored and stored correctly for items
     
     # create unique sources
-    source <- makevectors(Nf, g, Nsources, g, 1, 0, prototype)  
+    source <- makevectors(Nf, g, Nsources, gsys, 1, 0, prototype)  
     
     # create sources for foils in case falsely recognized old - relevant to the experimental design 
     source.for.foils <- rep(source, 3)
