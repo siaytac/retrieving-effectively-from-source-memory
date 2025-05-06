@@ -1,4 +1,3 @@
-### RECOGNITION TEST
 testmemory <- function(memorytraces, testitem, c, gsys) { 
   
   allikes=matrix(NA, ncol(memorytraces), ncol=1) # set up vector to keep track of every lambda value
