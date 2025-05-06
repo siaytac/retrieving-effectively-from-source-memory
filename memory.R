@@ -7,11 +7,11 @@ memory = function(Nf, g, gsys, u, usource, c, criterion, condition, nsubj, Ntarg
     
     # create items
     prototype <- matrix((rgeom(1*Nf, g)+1),ncol=1) 
-    targets <- makevectors(Nf, g, Ntargets, g, 1, 0, prototype) # note values of u is 1 and c is 0 because we want every ...
-    foils <- makevectors(Nf, g, Nfoils, g, 1, 0, prototype)     # feature to be stored and stored correctly for items
+    targets <- makevectors(Nf, g, Ntargets, 1, 0, prototype) # note values of u is 1 and c is 0 because we want every ...
+    foils <- makevectors(Nf, g, Nfoils, 1, 0, prototype)     # feature to be stored and stored correctly for items
     
     # create unique sources
-    source <- makevectors(Nf, g, Nsources, g, 1, 0, prototype)  
+    source <- makevectors(Nf, g, Nsources, 1, 0, prototype)  
     
     # create sources for foils in case falsely recognized old - relevant to the experimental design 
     source.for.foils <- rep(source, 3)
@@ -80,8 +80,8 @@ memory = function(Nf, g, gsys, u, usource, c, criterion, condition, nsubj, Ntarg
         
         if (is.na(odds) || odds<criterion) {
           
-          newvectoritem <- makevectors(Nf, g, 1, gsys, u, c, studylistreordered[1:Nf,trial])
-          newvectorsource <- makevectors(Nf, g, 1, gsys, usource, c, studylistreordered[(Nf+1):(Nf*2),trial])
+          newvectoritem <- makevectors(Nf, gsys, 1, u, c, studylistreordered[1:Nf,trial])
+          newvectorsource <- makevectors(Nf, gsys, 1, usource, c, studylistreordered[(Nf+1):(Nf*2),trial])
           newvector <- rbind(newvectoritem, newvectorsource)
           
           if (repetitions == 1) {
@@ -118,7 +118,7 @@ memory = function(Nf, g, gsys, u, usource, c, criterion, condition, nsubj, Ntarg
           # if source odd is lower than criterion, add the probe as a new source
           if (sourceodds < criterion) {
             
-            newvector <- makevectors(Nf, g, 1, gsys, usource, c, studylistreordered[(Nf+1):(Nf*2),trial])
+            newvector <- makevectors(Nf, gsys, 1, usource, c, studylistreordered[(Nf+1):(Nf*2),trial])
             store.house[[bestmatch]] <- c(store.house[[bestmatch]], newvector)
             memorytraces <- sapply(store.house, "length<-", max(lengths(store.house))) 
             
