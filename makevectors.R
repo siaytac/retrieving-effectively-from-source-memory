@@ -5,7 +5,7 @@ makevectors <- function(Nf, g, Nitemstomake, gsys, u, c, prototype) {
   
   #make copies (w/imperfect encoding (u)=> memory OR w/o, if u=1, to make similar study items)  
   numFeatures<-length(studyList) #How many features are there?
-  randFeatures<-rgeom(numFeatures, gsys)+1 #make actual feature values that will serve as the item vectors
+  randFeatures<-rgeom(numFeatures, g)+1 #make actual feature values that will serve as the item vectors
   
   traces<-array(0, dim(studyList)) #Make an empty array to hold the stored traces, note that 0 is important here - it means that a feature value is not stored and therefore does not contribute to the memory decision
   randStore<-array(runif(numFeatures),dim(studyList)) #Generate an array of uniform probabilities that we'll use to decide what should be stored
