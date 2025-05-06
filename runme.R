@@ -10,7 +10,7 @@ setwd(my.dir)
 # load the functions you will need to run this simulation
 source("makevectors.R") # create vectors
 source("updatevectors.R") # update vectors after decision
-source("recognitiontest.R") # test memory
+source("itemtest.R") # item memory
 source("sourcetest.R") # source memory
 
 # set up the parameters
