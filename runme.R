@@ -31,7 +31,7 @@ Nsourcefoils <- 12 # number of items with a new source
 
 condition <- 1 # you need to set the condition here: 1=Condition 3-0-0, 2=Condition 2-1-0 Strong, 3=Condition 1-1-1, 4=Condition 2-1-0 Weak
 
-source("memory.R") # load the function for Experiment 1 in Aytac et al. (2024)
+source("memory.R")
 
 # run the simulation
 data <- memory(Nf, g, gsys, u, usource, c, criterion, condition, nsubj, Ntargets, Nfoils, Nsources, Nsourcefoils)
