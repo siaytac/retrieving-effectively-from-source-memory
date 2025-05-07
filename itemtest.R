@@ -1,10 +1,10 @@
-testmemory <- function(memorytraces, testitem, c, gsys) { 
+testmemory <- function(Nf, memorytraces, testitem, c, gsys) { 
   
   allikes=matrix(NA, ncol(memorytraces), ncol=1) # set up vector to keep track of every lambda value
   
   for(counttrace in 1:ncol(memorytraces)){ # go through each trace stored in memory
     
-    trace<-matrix((memorytraces[1:20,counttrace]), ncol=1) # identify the specific memory trace that will be compared to the test item
+    trace<-matrix((memorytraces[1:Nf,counttrace]), ncol=1) # identify the specific memory trace that will be compared to the test item
     numzeros<-sum((trace==0)) #count up the zeros -- features that are not stored -- because they do not contribute to the memory decision 
     match <- which(testitem == trace) #identify the feautures in the memory trace that match the test item
     mismatch <- which(testitem != trace) #identify the feautures that mismatch
