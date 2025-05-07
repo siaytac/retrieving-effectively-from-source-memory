@@ -111,7 +111,7 @@ memory = function(Nf, g, gsys, u, usource, c, criterion, condition, nsubj, Ntarg
           n <- length(memorytraces[, bestmatch][(!is.na(memorytraces[, bestmatch]))])
           n <- n/Nf-1
           
-          sourcealllikes <- testsourcememory(memorytraces, sourceprobe, c, gsys, n, bestmatch)
+          sourcealllikes <- testsourcememory(Nf, memorytraces, sourceprobe, c, gsys, n, bestmatch)
           
           sourceodds <- mean(sourcealllikes[(!is.na(sourcealllikes))])
           
@@ -224,7 +224,7 @@ memory = function(Nf, g, gsys, u, usource, c, criterion, condition, nsubj, Ntarg
         n <- length(memorytraces[,bestmatch][(!is.na(memorytraces[,bestmatch]))])
         n <- n/Nf-1
         
-        sourcealllikes <- testsourcememory(memorytraces, testsource, c, gsys, n, bestmatch)
+        sourcealllikes <- testsourcememory(Nf, memorytraces, testsource, c, gsys, n, bestmatch)
         
         sourcealllikes <- mean(sourcealllikes[(!is.na(sourcealllikes))]) # take the mean of all likelihood ratios
         
