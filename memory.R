@@ -75,7 +75,7 @@ memory = function(Nf, g, gsys, u, usource, c, criterion, condition, nsubj, Ntarg
         
         ## Step 1: Item Decisions
         itemprobe <- matrix(studylistreordered[1:Nf, trial], ncol=1) 
-        allikes <- testmemory(memorytraces, itemprobe, c, gsys) 
+        allikes <- testmemory(Nf, memorytraces, itemprobe, c, gsys) 
         odds <- mean(allikes[!is.na(allikes)])
         
         if (is.na(odds) || odds<criterion) {
@@ -199,7 +199,7 @@ memory = function(Nf, g, gsys, u, usource, c, criterion, condition, nsubj, Ntarg
     for (trial in 1:ncol(testlistreordered)) {  
       
       testitem <- matrix((testlistreordered[, trial]), ncol=1)  # get the test item
-      allikes <- testmemory(memorytraces, testitem, c, gsys) # call function to test memory
+      allikes <- testmemory(Nf, memorytraces, testitem, c, gsys) # call function to test memory
       
       odds <- mean(allikes[!is.na(allikes)]) # because this is recognition
       
