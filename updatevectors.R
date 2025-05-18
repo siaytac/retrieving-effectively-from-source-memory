@@ -1,6 +1,6 @@
 updatevectors <- function(Nf, gsys, studylistreordered, memorytraces, u, c, bestmatch.source, ii, trial, bestmatch) {
   
-  randFeatures<-rgeom(Nf, gsys)+1 #Random features
+  randFeatures<-rgeom(Nf, gsys)+1 # random features
   probe = studylistreordered[(1+Nf*(ii-1)):(Nf*ii), trial] # probe including every feature stored correctly 
   
   trace <- array(memorytraces[(1+Nf*(bestmatch.source-1)):(Nf*bestmatch.source), bestmatch]) 
