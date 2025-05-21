@@ -13,7 +13,7 @@ source("updatevectors.R") # update vectors after decision
 source("itemtest.R") # item memory
 source("sourcetest.R") # source memory
 
-# set up the parameters
+# set the parameters
 Nf <- 20          # number of features in a vector (vector length)
 g <- gsys <- 0.35 # feature frequency
 c <- 0.7          # probability of correctly copying a feature
@@ -23,7 +23,7 @@ criterion <- 1    # criterion for endorsing a probe
 
 nsubj <- 1000     # number of synthetic subjects
 
-# set up the parameters for the experimental design
+# set the parameters for the experimental design
 Ntargets <- 48     # number of targets
 Nsources <- 4      # number of unique sources
 Nfoils <- 12       # number of foils
